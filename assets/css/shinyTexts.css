@@ -17,6 +17,8 @@ body{
 }
 h2{
     color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     font-size: 125px;
     
     letter-spacing: 15px;
@@ -37,10 +39,32 @@ h2{
     animation: animate 5s linear infinite;
 }
 
+h3{
+    color: #fff;
+    font-size: 88px;
+    font-family: 'Zhi Mang Xing', cursive;
+    letter-spacing: 15px;
+   
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 135px;
+    outline: none;
+    /* customize color */
+    --neon:rgb(91, 148, 23);
+    /* customize shadow */
+    text-shadow: 0 0 10px var(--neon),
+    0 0 20px var(--neon),
+    0 0 40px var(--neon),
+    0 0 80px var(--neon),
+    0 0 160px var(--neon);
+    /* animation setting */
+    animation: animate 5s linear infinite;
+}
+
 /* define the animation */
 @keyframes animate {
     to{
         /* change the degree to change the color */
-        filter: hue-rotate(30deg);
+        filter: hue-rotate(20deg);
     }
 }
