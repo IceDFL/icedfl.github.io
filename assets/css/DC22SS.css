@@ -126,11 +126,11 @@ h2{
 
 .container .card .text-box{
     position: absolute;
-    max-height: 40vh;
+    max-height: 50vh;
     max-width: 75vw;
     margin-top: 0rem;
     padding: 1rem 1rem;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     text-align: start;
     color: #111;
