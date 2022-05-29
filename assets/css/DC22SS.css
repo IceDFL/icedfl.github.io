@@ -200,9 +200,9 @@ h2{
 .container .card2 .text-box p{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-    line-height: 2rem;
+    line-height: 1.5rem;
     margin-top: 0rem;
-    max-width: 80vw;
+    max-width: 85vw;
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
     flex-wrap: wrap;
