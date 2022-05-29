@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
 body{
     /* window height 100% */
     min-height: 100vh;
+    min-width: 100vw;
     /* flex and center */
     display: flex;
     justify-content: center;
@@ -12,9 +14,25 @@ body{
     background-color: #000;
 }
 .container{
+    width: 100vw;
+    height: 100vh;
+
+    scroll-snap-type: y mandatory;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
     /* effects */
     -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(0,0,0,0.2));
+
+    position: relative;
+
+    flex-wrap: wrap;
+    padding: 30px;
 }
+
+    
+
 h2{
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -67,4 +85,116 @@ h3{
         /* change the degree to change the color */
         filter: hue-rotate(20deg);
     }
+}
+
+.container div{
+    /* 100%窗口宽度和高度 */
+    width: 100vw;
+    height: 100vh;
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: var(--bg);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+   
+    line-height: 26px;
+    color: #fff;
+    /* 设置下一页的内容会滚动贴合到顶部 */
+    scroll-snap-align: start;
+}
+
+
+.container .card{
+    position: relative;
+    width: 28vw;
+    height: 60vh;
+    background-color: #fff;
+    /*margin: 30px 15px;
+    padding: 20px 15px;*/
+    border-radius: 5px;
+    /* 阴影 */
+    box-shadow: 0 5px 200px rgba(0,0,0,0.5);
+    /* 动画过渡 */
+    transition: 0.2s ease-in-out;
+}
+
+.container .card .img-box{
+    position: absolute;
+    left: 0px;
+    max-height: 60vh;
+    width: 28vw;
+    border-radius: 5px;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 阴影 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.2s ease-in-out;
+}
+
+.container .card .img-box img{
+    width: 100%;
+}
+
+.container .card:hover .img-box{
+    height: 30vh;
+    transition-delay: 0.1s;
+}
+
+.container .card .text-box{
+    position: absolute;
+    max-height: 30vh;
+    max-width: 28vw;
+    margin-top: 20px;
+    padding: 10px 15px;
+
+    text-align: start;
+    color: #111;
+    /* 设置元素不可见 */
+    visibility: hidden;
+    /* 不透明度 */
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+    z-index: 2
+}
+.container .card .text-box p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 25px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: #000;
+}
+
+.container .card .text-box2{
+    position: relative;
+    max-height: 10vh;
+    width: 28vw;
+    margin-top: 0px;
+    padding: 10px 15px;
+
+    text-align: start;
+    color: #111;
+
+    opacity: 0.95;
+    transition: 0.2s ease-in-out;
+    z-index: 1
+}
+.container .card .text-box2 h4{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    line-height: 26px;
+    outline: none;
+}
+.container .card:hover .text-box{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.1s;
 }
