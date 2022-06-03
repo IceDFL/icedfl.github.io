@@ -18,6 +18,7 @@ function sortTable(idx){
             if(!isNaN(value1)&&!isNaN(value2)){
                 // 数字排序
                 return value1-value2;
+
             }else{
                 // 字符串排序
                 return value1.localeCompare(value2);
@@ -35,3 +36,24 @@ function sortTable(idx){
     // 更新sortCol
     obody.sortCol=idx;
 }
+
+function convertDate(d) {
+    var p = d.split("/");
+    return +(p[2]+p[1]+p[0]);
+  }
+  
+  function sortByDate() {
+    var tbody = document.querySelector("#schedule");
+    // get trs as array for ease of use
+    var rows = [].slice.call(tbody.querySelectorAll("tr"));
+    
+    rows.sort(function(a,b) {
+      return convertDate(a.cells[0].innerHTML) - convertDate(b.cells[0].innerHTML);
+    });
+    
+    rows.forEach(function(v) {
+      tbody.appendChild(v); // note that .appendChild() *moves* elements
+    });
+  }
+  
+  document.querySelector("button").addEventListener("click", sortByDate);

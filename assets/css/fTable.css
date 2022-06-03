@@ -8,11 +8,11 @@ body{
     justify-content: center;
     align-items: center;
     background-color: #eee;
+    font-family: 'Montserrat', sans-serif;
 }
 .table-box{
     width: 95vw;
     position: relative;
-    font-family: 'Montserrat', sans-serif;
 }
 table{
     width: 100%;
@@ -23,6 +23,7 @@ table{
 th{
     background-color: #ffaa3d;
     height: 25px;
+    position:relative;
     cursor: pointer;
 }
 th,td{
@@ -32,6 +33,7 @@ th,td{
     padding: 1rem 1rem;
     border: 1px solid #ddd;
 }
+
 
 table>tbody>tr:hover {
     background-color: #ffaa3d;
@@ -51,4 +53,33 @@ table>tbody>tr:hover {
 .box p{
     line-height: 37.5px;
     font-size: 15px;
+}
+
+a:hover {
+    color: #5854cc;
+  }
+  
+  a:active {
+      color:#fff
+  }
+
+  .container{
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    position: relative;
+
+    top: 0;
+
+    flex-wrap: wrap;
+}
+
+.container .searchBox{
+    font-family: 'Montserrat', sans-serif;
+    height: 1.5rem;
+    font-size: 1rem;
+
 }
