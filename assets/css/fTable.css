@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 弹性布局 居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.table-box{
+    width: 95vw;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+table{
+    width: 100%;
+    background-color: #fff;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th{
+    background-color: #ffaa3d;
+    height: 25px;
+    cursor: pointer;
+}
+th,td{
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem 1rem;
+    border: 1px solid #ddd;
+}
+
+table>tbody>tr:hover {
+    background-color: #ffaa3d;
+}
+/* 悬浮层 */
+.box{
+    background-color: rgba(0,0,0,0.8);
+    color: #fff;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    display: none;
+}
+.box p{
+    line-height: 37.5px;
+    font-size: 15px;
+}
