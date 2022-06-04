@@ -43,6 +43,10 @@ th,td{
 table>tbody>tr:hover {
     background-color: #ffaa3d;
 }
+
+
+
+
 /* 悬浮层 */
 .box{
     background-color: rgba(0,0,0,0.8);
@@ -74,7 +78,7 @@ a:active {
   .container{
     height: 5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     overflow-x: hidden;
@@ -88,7 +92,8 @@ a:active {
 .container .searchBox{
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    height: 3rem
+    height: 3rem;
+    width: 15rem;
 
 }
 
@@ -103,4 +108,27 @@ input:focus{
     outline: 0;
     -webkit-box-shadow: inset 0 5px 5px rgba(0,0,0,.075),0 0 8px #FF9D74;
     box-shadow: inset 0 5px 5px rgba(0,0,0,.075),0 0 8px #FF9D74;
+}
+
+nav button{
+    background-color: #FF9D74;
+    font-family: 'Montserrat', sans-serif;
+    border: none; 
+    color: white; 
+    padding: 1rem 1rem; 
+    text-align: center; 
+    display: inline-block; 
+    font-size: 1rem; 
+    /* margin: 4px 2px; */ 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition-duration: 0.4s;	
+}
+
+nav button:hover {
+    background-color: #ffaa3d;
+}
+
+nav button:active {
+    background-color: #ffaa3d; box-shadow: 0 3px #9d5a02;
 }

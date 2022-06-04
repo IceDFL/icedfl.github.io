@@ -17,7 +17,16 @@
 <body>
     <div> 
       <div class="container">
-        <input class="searchBox" id="search" placeholder="  Type in M# here.">
+        <input class="searchBox" id="search" placeholder="  Type in here to search">
+        <nav class="module">
+            <button class="select" name="M0">Module 0</button>
+            <button class="select" name="M1">Module 1</button>
+            <button class="select" name="M2">Module 2</button>
+            <button class="select" name="M3">Module 3</button>
+            <button class="select" name="M4">Module 4</button>
+            <button class="select" name="M5">Module 5</button>
+            <button class="select" name="W1">Workout</button>
+        </nav>
       </div> 
       <div class="table-box" id="schedule">
         <table>
@@ -476,4 +485,40 @@ $("input#search").on("keydown keyup", function() {
   allRows.hide();
   $("tr:contains('" + $(this).val() + "')").show();
 });
+
+$('button[name="M0"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M0')").show();
+});
+
+$('button[name="M1"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M1')").show();
+});
+
+$('button[name="M2"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M2')").show();
+});
+
+$('button[name="M3"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M3')").show();
+});
+
+$('button[name="M4"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M4')").show();
+});
+
+$('button[name="M5"]').click(function(){
+  allRows.hide();
+  $("tr:contains('M5')").show();
+});
+
+$('button[name="W1"]').click(function(){
+  allRows.hide();
+  $("tr:contains('W1')").show();
+});
+
 </script>
