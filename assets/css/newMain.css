@@ -1,0 +1,145 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    background-color:#F0BBBA
+}
+
+
+a {
+    color: #754746;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff
+}
+
+a:active {
+    color:#fff
+}
+
+button{
+    /* 相对定位 */
+    position: relative;
+    margin-right: 50px;
+    width: 400px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #fff;
+    /* 渐变背景 */
+    background: linear-gradient(to right,#F0BBBA,#5C8BD8,#D8BFD8,#ffdab9);
+    /* 背景渐变色大小 */
+    background-size: 400%;
+    /* 圆角 */
+    border-radius: 50px;
+    z-index: 1;
+    font-weight: 500;
+}
+/* 发光效果 */
+button::before{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    /* 渐变背景 */
+    background: linear-gradient(to right,#F0BBBA,#5C8BD8,#D8BFD8,#ffdab9);
+    /* 背景渐变色大小 */
+    background-size: 400%;
+    /* 圆角 */
+    border-radius: 50px;
+    /* 位于按钮之下 */
+    z-index: -1;
+    /* 设置模糊度 显示发光效果 */
+    filter: blur(20px);
+}
+
+button:hover{
+    /* 动画：名称 时间 infinite是无限次播放 */
+    animation: streamer 8s infinite;
+}
+button:hover::before{
+    animation: streamer 8s infinite;
+}
+@keyframes streamer{
+    100%{
+        background-position: -400% 0;
+    }
+}
+
+button.hidden{
+    display:none
+}
+
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    /* 需要把滚动条设置到直接父容器，scroll-snap-type才能生效 */
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.container div{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--c);
+    font-size: 200px;
+    color: #fff;
+    scroll-snap-align: start;
+}
+
+.fancyOpening{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(125deg,#F0BBBA,#5C8BD8,#D8BFD8,#ffdab9,#DF7775);
+    background-size: 500%;
+    /* 执行动画：动画名 时长 线性的 无限次播放 */
+    animation: bgAnimation 15s linear infinite;
+}
+
+@keyframes bgAnimation {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+.imgContainer{
+    column-count: 5;
+    column-gap: 0px;
+}
+.imgItem{
+    padding: 3px;
+}
+.imgItem img{
+    display: block;
+    width: 100%;
+}
