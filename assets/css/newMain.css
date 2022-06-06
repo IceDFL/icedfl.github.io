@@ -33,6 +33,7 @@ button{
     /* 相对定位 */
     position: relative;
     margin-right: 50px;
+    margin-left: 50px;
     width: 400px;
     height: 100px;
     line-height: 100px;
@@ -107,6 +108,7 @@ button.hidden{
     font-size: 200px;
     color: #fff;
     scroll-snap-align: start;
+    flex-wrap: wrap;
 }
 
 .fancyOpening{
@@ -142,4 +144,29 @@ button.hidden{
 .imgItem img{
     display: block;
     width: 100%;
+}
+
+@media screen and (max-width: 736px) {
+
+    button{
+        position: relative;
+        margin-right: 20px;
+        margin-left: 20px;
+        min-width: 270px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        color: #fff;
+        z-index: 1;
+        font-weight: 300;
+    }
+
+    h3{
+        font-size: 90px;
+        font-weight: 500;
+    }
+
 }
