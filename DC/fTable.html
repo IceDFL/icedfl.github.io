@@ -471,6 +471,50 @@
             </tbody>
         </table>
         <div class="box"></div>
+
+        <p class="container">
+          <p>Answer a few questions, and we will recommend a track.</p>
+          <p>Have you taken any systematic math contest classes outside of school which are beyond Algebra?</p>
+          <button id="cSQ1_1">Yes</button>
+          <button id="cSQ1_2">No</button>
+          <button id="CSClear">Clear and restart</button>
+
+          <div class="courseSelection" id="CSQ2_1" style="display:none"><p>Do you find AMC 8 Geometry problems hard?</p>
+          <button id="cSQ2_1" style="display:none">Yes</button>
+          <button id="cSQ2_2" style="display:none">No</button></div>
+
+          <div class="courseSelection" id="CSQ2_2" style="display:none"><p>Do you already know 6th grade math (USA standard)?</p>
+          <button id="cSQ2_2_1" style="display:none">Yes</button>
+          <button id="cSQ2_2_2" style="display:none">No</button></div>
+
+          <div class="courseSelection" id="CSR1" style="display:none"><p><strong>Take Module 2 (Geometry) → Module 3 (Combinatorics) → Module 5 (Number Theory). Any of these courses can be taken at the same time.</strong></p></div>
+          
+          <div class="courseSelection" id="CSQ3" style="display:none"><p>Do you find AMC 10 Combinatorics problems hard?</p>
+          <button id="cSQ3_1" style="display:none">Yes</button>
+          <button id="cSQ3_2" style="display:none">No</button></div>
+          
+          <div class="courseSelection" id="CSR2" style="display:none"><p><strong>Take Module 3 (Combinatorics) → Module 5 (Number Theory). These are unique courses designed by Prof. Loh to give you fresh perspectives in those areas.</strong></p></div>
+          
+          <div class="courseSelection" id="CSQ4" style="display:none"><p>Do you find AMC 12 Combinatorics problems hard?</p>
+          <button id="cSQ4_1" style="display:none">Yes</button>
+          <button id="cSQ4_2" style="display:none">No</button></div>
+          
+          <div class="courseSelection" id="CSR3" style="display:none"><p><strong>Take Module 5 (Number Theory). This is a unique course designed by Prof. Loh to give you fresh perspectives in that subject.</strong></p></div>
+          
+          <div class="courseSelection" id="CSR4" style="display:none"><p><strong>You are likely beyond our courses, and are ready to learn on your own.</strong></p></div>
+          
+          <div class="courseSelection" id="CSR5" style="display:none"><p><strong>You are the perfect fit for our full course series. Take our modules in order, from Module 0 (Introduction) to Module 5 (Number Theory). You can take consecutive modules simultaneously. For example, you can take Modules 0 and 1 at the same time, to take advantage of the summer program's class schedule.</strong></p></div>
+          
+          <div class="courseSelection" id="CSQ5" style="display:none"><p>Are you very comfortable with decimals, fractions, and percents?</p>
+          <button id="cSQ5_1" style="display:none">Yes</button>
+          <button id="cSQ5_2" style="display:none">No</button></div>
+          
+          <div class="courseSelection" id="CSR6" style="display:none"><p><strong>Do not take Module 0 first, because Module 0 is a wide-ranging introduction to many subject areas in beyond-curricular middle school math. So, Module 0 requires knowledge about many different topics, which you may not have seen. Instead, start with Module 1, whose prerequisite knowledge is narrower (only fractions, decimals, and percents). After finishing Module 1, even young students will gain an early start in developing strong mathematical maturity, and learning how to think and ask questions about unfamiliar concepts. You can then take Module 0 to see how interesting and broad math is, or you can take our Workout 1A and 1B courses which provide further practice and challenge on those algebraic topics. (You can also take Module 0 and Workouts 1A+1B simultaneously.)</strong></p></div>
+          
+          <div class="courseSelection" id="CSR7" style="display:none"><p><strong>You may be too young for our courses. Learn decimals, fractions, and percents first, and then you'll be able to start.</strong></p></div>
+        
+        </div>
+
       </div>
 
 </body>
@@ -521,4 +565,67 @@ $('button[name="W1"]').click(function(){
   $("tr:contains('W1')").show();
 });
 
+
+$('#cSQ1_1').click(function(){
+  $('#CSQ2_1').show();
+  $('#cSQ2_1').show();
+  $('#cSQ2_2').show();
+});
+
+$('#cSQ1_2').click(function(){
+  $('#CSQ2_2').show();
+  $('#cSQ2_2_1').show();
+  $('#cSQ2_2_2').show();
+});
+
+$('#cSQ2_1').click(function(){
+  $('#CSR1').show();
+});
+
+$('#cSQ2_2').click(function(){
+  $('#CSQ3').show();
+  $('#cSQ3_1').show();
+  $('#cSQ3_2').show();
+});
+
+$('#cSQ3_1').click(function(){
+  $('#CSR2').show();
+});
+
+$('#cSQ3_2').click(function(){
+  $('#CSQ4').show();
+  $('#cSQ4_1').show();
+  $('#cSQ4_2').show();
+});
+
+$('#cSQ4_1').click(function(){
+  $('#CSR3').show();
+});
+
+$('#cSQ4_2').click(function(){
+  $('#CSR4').show();
+});
+
+$('#cSQ2_2_1').click(function(){
+  $('#CSR5').show();
+});
+
+$('#cSQ2_2_2').click(function(){
+  $('#CSQ5').show();
+  $('#cSQ5_1').show();
+  $('#cSQ5_2').show();
+});
+
+$('#cSQ5_1').click(function(){
+  $('#CSR6').show();
+});
+
+$('#cSQ5_2').click(function(){
+  $('#CSR7').show();
+});
+
+$('#CSClear').click(function(){
+  $('div.courseSelection').hide();
+});
 </script>
+
